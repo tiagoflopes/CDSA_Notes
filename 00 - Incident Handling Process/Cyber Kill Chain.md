@@ -1,5 +1,5 @@
 The attack lifecycle describes how attacks manifest themselves
-![[Cyber_kill_chain.png]]
+![[cyber_kill_chain.png]]
 - Recon - the initial stage, where an attacker chooses their target and gather as much information as they can (passive or active)
 - Weaponize - where the attacker develops and embeds the malware into some type of exploit or deliverable payload. the malware is crafted to be extremely lightweight and undetectable by the antivirus and detection tools (for this to be possible, the attacker must've gather information to identify those)
 - Delivery - this is where the exploit/payload is delivered to the victim(s) either by phishing emails, smishing, vishing, physical interaction... it is rare to deliver a payload that requires the victim to do more than double-click an executable file
