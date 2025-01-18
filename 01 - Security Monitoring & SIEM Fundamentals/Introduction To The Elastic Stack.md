@@ -52,12 +52,12 @@ By using the Discover feature, we can gain insights into the architecture of the
 ## The Elastic Common Schema (ECS)
 
 ECS is a shared and extensible vocabulary for events and logs across the Elastic Stack, which ensures consistent field formats across different data sources. Here are some key advantages in using them:
-- Unified Data View - it enforces a structured and consistent approach to data, allowing for unified views across multiple data sources.
-- Improved Search Efficiency - by standardizing the field names across different data types.
-- Enhanced Correlation - you can correlate an IP address involved in a security incident with network traffic logs, firewall logs and endpoint data.
-- Better Visualizations - all data sources adhere to the same schema, so creating dashboards and visualizations becomes easier and more intuitive.
-- Interoperability with Elastic Solutions - ensures full compatibility with advanced features such as Elastic Security, Elastic Observability and Elastic Machine Learning.
-- Future-proofing - ensures future compatibility with enhancements and new features that are introduced into the Elastic ecosystem.
+- Unified Data View - It enforces a structured and consistent approach to data, allowing for unified views across multiple data sources.
+- Improved Search Efficiency - By standardizing the field names across different data types.
+- Enhanced Correlation - You can correlate an IP address involved in a security incident with network traffic logs, firewall logs and endpoint data.
+- Better Visualizations - All data sources adhere to the same schema, so creating dashboards and visualizations becomes easier and more intuitive.
+- Interoperability with Elastic Solutions - Ensures full compatibility with advanced features such as Elastic Security, Elastic Observability and Elastic Machine Learning.
+- Future-proofing - Ensures future compatibility with enhancements and new features that are introduced into the Elastic ecosystem.
 
 ## Questions
 
