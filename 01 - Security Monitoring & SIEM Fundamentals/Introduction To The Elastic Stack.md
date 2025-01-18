@@ -38,8 +38,31 @@ This query filters data to show events that have the Windows event code and wher
 
 ## How To Identify The Available Data
 
-asdasd
+##### Leverage KQL's free text search
+By using the Discover feature, we can gain insights into the architecture of the available fields, before we start constructing KQL queries.
+##### Leverage Elastic's documentation
+- [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current/ecs-reference.html)
+- [Elastic Common Schema (ECS) event fields](https://www.elastic.co/guide/en/ecs/current/ecs-event.html)
+- [Winlogbeat fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields-winlog.html)
+- [Winlogbeat ECS fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields-ecs.html)
+- [Winlogbeat security module fields](https://www.elastic.co/guide/en/beats/winlogbeat/master/exported-fields-security.html)
+- [Filebeat fields](https://www.elastic.co/guide/en/beats/filebeat/current/exported-fields.html)
+- [Filebeat ECS fields](https://www.elastic.co/guide/en/beats/filebeat/current/exported-fields-ecs.html)
 
 ## The Elastic Common Schema (ECS)
 
-asdfg
+ECS is a shared and extensible vocabulary for events and logs across the Elastic Stack, which ensures consistent field formats across different data sources. Here are some key advantages in using them:
+- Unified Data View - it enforces a structured and consistent approach to data, allowing for unified views across multiple data sources.
+- Improved Search Efficiency - by standardizing the field names across different data types.
+- Enhanced Correlation - you can correlate an IP address involved in a security incident with network traffic logs, firewall logs and endpoint data.
+- Better Visualizations - all data sources adhere to the same schema, so creating dashboards and visualizations becomes easier and more intuitive.
+- Interoperability with Elastic Solutions - ensures full compatibility with advanced features such as Elastic Security, Elastic Observability and Elastic Machine Learning.
+- Future-proofing - ensures future compatibility with enhancements and new features that are introduced into the Elastic ecosystem.
+
+## Questions
+
+- Navigate to http://[Target IP]:5601, click on the side navigation toggle, and click on "Discover". Then, click on the calendar icon, specify "last 15 years", and click on "Apply". Finally, choose the "windows*" index pattern. Now, execute the KQL query that is mentioned in the "Comparison Operators" part of this section and enter the username of the disabled account as your answer. Just the username; no need to account for the domain.
+	- anni
+
+- Now, execute the KQL query that is mentioned in the "Wildcards and Regular Expressions" part of this section and enter the number of returned results (hits) as your answer.
+	- 8
