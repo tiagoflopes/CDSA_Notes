@@ -34,7 +34,25 @@ Consider the following when developing any use case:
 
 Attackers [exploit MSBuild](https://blog.talosintelligence.com/building-bypass-with-msbuild/)'s ability to include malicious source code within its configuration or project file.
 To address this risk, we create a detection use case in our SIEM solution that monitors instances of MSBuild initiated by Excel or Word, as this behavior could indicate a malicious script payload execution.
+Next, let's define prioruty, impact and map the alert to the kill chain/MITRE framework.
+This varies on the organization's specific context and landscape. For this one, it is in a high global risk category.
+To define TTD and TTR, we need to focus on the rule's execution interval and the data ingestion pipeline. For this example, we set the rule to run every 5 minutes.
+When creating an SOP or documenting alert handling, consider:
+- process.name
+- process.parent.name
+- event.action
+- machine where the alert was detected
+- user associated with the machine
+- user activity within +/- 2 days of the alert's generation
+After this, engage with the user and examine the machine to analyze system logs, antivirus logs and proxy logs from the SIEM for full visibility.
+For rule fine-tuning, while the Build Engine is common among Windows developers, its use by non-engineers isn't, so exclude legitimate parent process names from the rule.
 
 ### Example 2 (MSBuild Making Network Connections)
 
-asdasd
+![[us2.png]]
+
+This is focusing once again on the MsBuild.exe binary, but this time, a machine attempts outbound communication with a remote or potentially malicious IP address.
+To address this risk, we need a monitoring solution capable of detecting instances where MSBuild is responsible for malicious outbound connections.
+Unlike the previous example, this situation could occur whenever MsBuild.exe establishes an outbound connection. This could be a legitimate IP address, making it MEDIUM severity.
+It also falls under the Execution (TA0002) tactic.
+The IRP will differ when handling this specific type of alert. Defenders will focus on event.action, IP address ans reputation off the IP, among other factors.
