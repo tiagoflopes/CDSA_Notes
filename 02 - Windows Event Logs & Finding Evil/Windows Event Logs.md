@@ -28,7 +28,6 @@ Each entry is an "Event" and contains some components:
 
 To streamline our analysis, we can create custom XML queries to identify related events using the "Logon ID" as a starting point.
 ![[example_xml_query.webp]]
-
 This query focuses on events containing the "SubjectLogonId" field with a value of "0x3E7"
 
 ## Useful Windows Event Logs
@@ -65,3 +64,9 @@ Find below an indicative (non-exhaustive) list of useful Windows event logs.
     - [Event ID 5145](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=5145) `(A network share object was checked to see whether client can be granted desired access)`: This event indicates that someone attempted to access a network share. Frequent checks of this sort might indicate a user or a malware trying to map out the network shares for future exploits.
     - [Event ID 5157](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=5157) `(The Windows Filtering Platform has blocked a connection)`: This is logged when the Windows Filtering Platform blocks a connection attempt. This can be helpful for identifying malicious traffic on your network.
     - [Event ID 7045](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=7045) `(A service was installed in the system)`: A sudden appearance of unknown services might suggest malware installation, as many types of malware install themselves as services.
+
+## Practical Exercises
+
+I have to build a query that filters for a specific object name and event ID.
+This is the result.
+![[exercise_xml_query.png]]
