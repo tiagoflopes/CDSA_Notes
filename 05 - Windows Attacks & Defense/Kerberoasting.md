@@ -42,8 +42,6 @@ This means that we can match volume of events by source IP address or requester 
 
 ## Honeypot
 
-^ebf986
-
 A honeypot user is a perfect detection option to configure. This must be a user with no real use/need, so that no service tickets are generated regularly. In this case, any attempts to generate a service ticket for this account is likely malicious and worth inspecting. There are a few things to ensure when using this account:
 - The account must be a relatively old user (advanced threat actors won't request tickets for new accounts because they likely have strong passwords and the possibility of being a honeypot user).
 - The password should not have been changed recently. The password must be strong enough that the threat agents cannot crack it.

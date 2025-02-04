@@ -19,7 +19,7 @@ Fortunately it is straightforward to detect when a GPO is modified, since it gen
 
 ## Honeypot
 
-A common thought  is that because of the easy detection methods of these attacks, it is worth having a misconfigured GPO in the environment. This will quickly turn out to be our weakest point if an escalation path is discovered via some GPO modification. However, when implementing a honeypot, consider the following:
+A common thought is that because of the easy detection methods of these attacks, it is worth having a misconfigured GPO in the environment. This will quickly turn out to be our weakest point if an escalation path is discovered via some GPO modification. However, when implementing a honeypot, consider the following:
 - GPO is linked to non-critical servers only.
 - Continuous automation is in place for monitoring modifications of GPO (If it is modified, we disable the user immediately).
 - The GPO should be automatically unlinked from all locations if a modification is detected.
