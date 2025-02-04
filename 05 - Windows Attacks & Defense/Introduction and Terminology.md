@@ -32,8 +32,21 @@ The most apparent practice to keep AD secure is ensuring that proper patch manag
 - Kerberos Tickets - Tokens that serve as proof of identity (created by the KDC)
 	- TGT is proof that the client submitted valid user information to the KDC.
 	- TGS is created for each service the client with a valid TGT wants to access
-- asdasd
+- KDC key is an encryption key that proves the TGT is valid.
+- The group Enterprise Admins has permissions over all domains in the forest.
+- Some important ports:
+	- 53 - DNS
+	- 88 - Kerberos
+	- 135 - WMI/RPC
+	- 137-139 & 445 - SMB
+	- 389 & 636 - LDAP
+	- 3389 - RDP
+	- 5985 & 5986 - PowerShell Remoting (WinRM)
 
 ## Real-world view
 
-asdasd
+There are a lot of misconfigurations that go against the least privilege principle (for commodity).
+AD has limitation however:
+1. **Complexity** - It is easy to get lost when looking into who is a member of a group, a member of another group and a member of yet another group. Many environments have every Domain user indirectly a member of Domain Admins.
+2. **Design** - SMB stores SYSVOL, that contains GPOs. SMB allows code execution, so as long as we have a set of valid credentials, we can consistently execute code over SMB on the Domain Controllers remotely.
+3. **Legacy** - Windows is not secure by default. DNS-like protocols NetBIOS and LLMNR are enabled by default and these broadcast user credentials on the wire. This [blog post](https://www.a2secure.com/en/blog/how-to-use-responder-to-capture-netntlm-and-grab-a-shell/) demonstrates the abuse of capturing credentials.
