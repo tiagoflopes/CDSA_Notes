@@ -1,6 +1,6 @@
 ## What is SIEM?
 
-Security Information and Event Management  encompasses the utilization of software offerings and solutions that merge the management of security data with the supervision of security events. These facilitate real-time evaluations of alerts produced by network hardware and applications.
+Security Information and Event Management encompasses the utilization of software offerings and solutions that merge the management of security data with the supervision of security events. These facilitate real-time evaluations of alerts produced by network hardware and applications.
 Some of the core functionalities it possesses are: the collection and administration of log events, the capacity to examine them and supplementary data from various sources as well as incident handling, visual summaries and documentation.
 Employing SIEM innovations, IT personnel can detect cyber attacks at the time or even prior to their occurrence, thereby enhancing the speed of their response.
 
